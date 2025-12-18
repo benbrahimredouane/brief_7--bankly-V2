@@ -1,4 +1,9 @@
+<?php
+session_start();
+include 'db.php';
 
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -14,6 +19,6 @@
         <input type="password" name="password" required><br><br>
         <button type="submit" name="connexion">Se connecter</button>
     </form>
-
+    
 </body>
 </html>
