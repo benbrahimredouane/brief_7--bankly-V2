@@ -2,7 +2,25 @@
 session_start();
 include 'db.php';
 
+if (isset($_POST['connexion'])) {
+    $user = $_POST['name'];
+    $pass = $_POST['password'];
 
+    
+    $user = mysqli_real_escape_string($conn, $user);
+    $pass = mysqli_real_escape_string($conn, $pass);
+
+    $sql = "SELECT * FROM users WHERE name = '$user' AND password = '$pass'";
+    $result = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($result) > 0) {
+        $_SESSION['user'] = $user;
+        header("Location: dashboard.php");
+        exit();
+    } else {
+        $error = "Identifiants invalides !";
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -19,6 +37,6 @@ include 'db.php';
         <input type="password" name="password" required><br><br>
         <button type="submit" name="connexion">Se connecter</button>
     </form>
-    
+    <?php if(isset($error)) echo "<p style='color:red'>$error</p>"; ?>
 </body>
 </html>
