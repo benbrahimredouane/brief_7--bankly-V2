@@ -3,7 +3,6 @@ session_start();
 if (!isset($_SESSION['user'])) { header("Location: index.php"); exit(); }
 include 'db.php';
 
-// On utilise JOIN pour lier la table accounts et la table clients
 $sql = "SELECT accounts.*, clients.name as owner_name 
         FROM accounts 
         JOIN clients ON accounts.client_id = clients.client_id";
