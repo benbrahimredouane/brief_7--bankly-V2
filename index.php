@@ -27,6 +27,42 @@ if (isset($_POST['connexion'])) {
 <head>
     <meta charset="UTF-8">
     <title>Bankly V2 - Connexion</title>
+    <style>
+        h2{
+            margin-top:20% ;
+            font-family:cursive;
+            text-align:center;
+        }
+
+        form{
+            border:2px solid red;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            width: 50%;
+            margin:auto;
+            padding:12px;
+            border-radius:11px;
+            box-shadow:0 5px 5px red;
+        }
+        label{
+            font-weight:bold;
+            font-family:cursive;
+
+        }
+        input{
+            border-radius:6px;
+            padding:3px;
+            
+        }
+        button{
+            background-color: blue;
+            color:white;
+            padding:5px;
+            border-radius:11px;
+            border:0;
+        }
+    </style>
 </head>
 <body>
     <h2>Connexion des Employés</h2>
@@ -37,6 +73,6 @@ if (isset($_POST['connexion'])) {
         <input type="password" name="password" required><br><br>
         <button type="submit" name="connexion">Se connecter</button>
     </form>
-    <?php if(isset($error)) echo "<p style='color:red'>$error</p>"; ?>
+    <?php if(isset($error)) echo "<p style='color:red ;text-align:center; margin:5%; font-size:20px; font-weight:bold;'>$error</p>"; ?>
 </body>
 </html>
