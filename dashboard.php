@@ -39,7 +39,7 @@ $total_global = mysqli_fetch_assoc($res_solde)['total_global'] ?? 0;
             margin-bottom: 5px;
         }
 
-        /* Navigation Bar */
+        
         nav {
             background: #fff;
             padding: 15px;
@@ -61,7 +61,7 @@ $total_global = mysqli_fetch_assoc($res_solde)['total_global'] ?? 0;
             background: #e7f3ff;
         }
 
-        /* Stats Grid */
+        
         .stats-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -76,7 +76,7 @@ $total_global = mysqli_fetch_assoc($res_solde)['total_global'] ?? 0;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             border-top: 4px solid #007bff;
-            /* Accent color line */
+        
         }
 
         .card h3 {
@@ -112,6 +112,7 @@ $total_global = mysqli_fetch_assoc($res_solde)['total_global'] ?? 0;
         <a href="list_clients.php"> Clients</a> |
         <a href="list_accounts.php"> Comptes</a> |
         <a href="make_transaction.php"> Transaction</a> |
+        <a href="transactions_history.php"> Historique</a> |
         <a href="logout.php" style="color:red"> Déconnexion</a>
     </nav>
     <hr>
