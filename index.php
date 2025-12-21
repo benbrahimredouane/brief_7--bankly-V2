@@ -27,42 +27,87 @@ if (isset($_POST['connexion'])) {
 <head>
     <meta charset="UTF-8">
     <title>Bankly V2 - Connexion</title>
-    <style>
-        h2{
-            margin-top:20% ;
-            font-family:cursive;
-            text-align:center;
-        }
+   <style>
+    
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f7f6;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
 
-        form{
-            border:2px solid red;
-            display:flex;
-            flex-direction:column;
-            align-items:center;
-            width: 50%;
-            margin:auto;
-            padding:12px;
-            border-radius:11px;
-            box-shadow:0 5px 5px red;
-        }
-        label{
-            font-weight:bold;
-            font-family:cursive;
+    h2 {
+        color: #333;
+        margin-bottom: 20px;
+    }
 
-        }
-        input{
-            border-radius:6px;
-            padding:3px;
-            
-        }
-        button{
-            background-color: blue;
-            color:white;
-            padding:5px;
-            border-radius:11px;
-            border:0;
-        }
-    </style>
+    
+    form {
+        background: white;
+        border: 1px solid #ddd;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 400px;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    label {
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #555;
+    }
+
+    input {
+        border-radius: 6px;
+        padding: 12px;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+    }
+
+    input:focus {
+        border-color: #007bff;
+        outline: none;
+    }
+
+    button {
+        background-color: #007bff;
+        color: white;
+        padding: 12px;
+        border-radius: 8px;
+        border: none;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    
+    .error-msg {
+        color: #d9534f;
+        background-color: #f2dede;
+        border: 1px solid #ebccd1;
+        padding: 10px;
+        border-radius: 6px;
+        margin-top: 20px;
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+</style>
 </head>
 <body>
     <h2>Connexion des Employés</h2>
@@ -73,6 +118,6 @@ if (isset($_POST['connexion'])) {
         <input type="password" name="password" required><br><br>
         <button type="submit" name="connexion">Se connecter</button>
     </form>
-    <?php if(isset($error)) echo "<p style='color:red ;text-align:center; margin:5%; font-size:20px; font-weight:bold;'>$error</p>"; ?>
+    <?php if(isset($error)) echo "<p class='error-msg' >$error</p>"; ?>
 </body>
 </html>
