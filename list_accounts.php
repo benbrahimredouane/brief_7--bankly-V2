@@ -14,6 +14,73 @@ $result = mysqli_query($conn, $sql);
 <head>
     <meta charset="UTF-8">
     <title>Liste des Comptes - Bankly V2</title>
+    <style>
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        margin: 40px;
+        background-color: #f8f9fa;
+        color: #333;
+    }
+
+    nav {
+        margin-bottom: 20px;
+        padding: 10px;
+        background: white;
+        border-radius: 5px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #007bff;
+        font-weight: 600;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden; /* Rounds the corners of the table */
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    th, td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+    }
+
+    th {
+        background-color: #f1f3f5;
+        font-size: 13px;
+        text-transform: uppercase;
+        color: #666;
+    }
+
+    tr:hover {
+        background-color: #fdfdfd;
+    }
+
+    
+    td:nth-child(5) {
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+
+    
+    .btn-action {
+        background-color: #007bff;
+        color: white !important;
+        padding: 6px 12px;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 13px;
+    }
+
+    .btn-action:hover {
+        background-color: #0056b3;
+    }
+</style>
 </head>
 <body>
     <nav>
