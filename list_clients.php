@@ -9,6 +9,47 @@ $result = mysqli_query($conn, "SELECT * FROM clients");
 <html lang="fr">
 <head>
     <title>Liste des Clients</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+        background-color: #f9f9f9;
+    }
+
+    nav {
+        margin-bottom: 20px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #007bff;
+        font-weight: bold;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse; 
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+        text-align: left;
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f2f2;
+        color: #333;
+        text-transform: uppercase;
+        font-size: 13px;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+</style>
 </head>
 <body>
     <nav><a href="dashboard.php">Dashboard</a> | <a href="add_client.php">Ajouter Client</a></nav>
