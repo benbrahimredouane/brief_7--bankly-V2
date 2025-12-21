@@ -53,6 +53,8 @@ $accounts = mysqli_query($conn, "SELECT accounts.account_id, accounts.account_nu
 
     nav {
         margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
     }
 
     nav a {

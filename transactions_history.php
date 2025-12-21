@@ -25,6 +25,8 @@ $result = mysqli_query($conn, $sql);
 
     nav {
         margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
     }
 
     nav a {

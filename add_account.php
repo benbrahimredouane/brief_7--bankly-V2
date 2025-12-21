@@ -34,6 +34,7 @@ $clients = mysqli_query($conn, "SELECT client_id, name FROM clients");
 
     h2 {
         color: #2c3e50;
+        text-align: center;
     }
 
     form {

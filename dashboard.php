@@ -37,6 +37,7 @@ $total_global = mysqli_fetch_assoc($res_solde)['total_global'] ?? 0;
         h1 {
             color: #2c3e50;
             margin-bottom: 5px;
+            text-align: center;
         }
 
         
@@ -46,6 +47,8 @@ $total_global = mysqli_fetch_assoc($res_solde)['total_global'] ?? 0;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
             margin: 20px 0;
+            display: flex;
+            justify-content: center;
         }
 
         nav a {
@@ -109,10 +112,10 @@ $total_global = mysqli_fetch_assoc($res_solde)['total_global'] ?? 0;
     <p>Bienvenue, <strong><?php echo $_SESSION['user']; ?></strong></p>
 
     <nav>
-        <a href="list_clients.php"> Clients</a> |
-        <a href="list_accounts.php"> Comptes</a> |
-        <a href="make_transaction.php"> Transaction</a> |
-        <a href="transactions_history.php"> Historique</a> |
+        <a href="list_clients.php"> Clients</a> 
+        <a href="list_accounts.php"> Comptes</a> 
+        <a href="make_transaction.php"> Transaction</a> 
+        <a href="transactions_history.php"> Historique</a> 
         <a href="logout.php" style="color:red"> Déconnexion</a>
     </nav>
     <hr>

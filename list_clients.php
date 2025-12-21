@@ -18,6 +18,8 @@ $result = mysqli_query($conn, "SELECT * FROM clients");
 
     nav {
         margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
     }
 
     nav a {

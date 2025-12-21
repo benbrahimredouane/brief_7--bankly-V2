@@ -31,6 +31,7 @@ if (isset($_POST['add'])) {
 
     h2 {
         color: #333;
+        text-align: center;
     }
 
     form {

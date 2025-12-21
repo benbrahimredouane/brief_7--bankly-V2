@@ -27,6 +27,8 @@ $result = mysqli_query($conn, $sql);
         padding: 10px;
         background: white;
         border-radius: 5px;
+        display: flex;
+        justify-content: center;
     }
 
     nav a {
@@ -40,7 +42,7 @@ $result = mysqli_query($conn, $sql);
         border-collapse: collapse;
         background: white;
         border-radius: 8px;
-        overflow: hidden; /* Rounds the corners of the table */
+        overflow: hidden; 
         box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     }
 

@@ -43,6 +43,7 @@ if (isset($_POST['connexion'])) {
     h2 {
         color: #333;
         margin-bottom: 20px;
+        text-align: center;
     }
 
     
