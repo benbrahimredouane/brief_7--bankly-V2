@@ -41,6 +41,67 @@ $accounts = mysqli_query($conn, "SELECT accounts.account_id, accounts.account_nu
 <html>
 <head>
     <title>Effectuer une Transaction</title>
+    <style>
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background-color: #f4f7f6;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+    }
+
+    nav {
+        margin-bottom: 20px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #007bff;
+        font-weight: bold;
+    }
+
+    form {
+        background: white;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        width: 100%;
+        max-width: 400px;
+    }
+
+    label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        color: #555;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #218838;
+    }
+</style>
 </head>
 <body>
     <nav><a href="dashboard.php">Dashboard</a> | <a href="list_accounts.php">Liste des Comptes</a></nav>
