@@ -29,6 +29,7 @@ $result = mysqli_query($conn, $sql);
         border-radius: 5px;
         display: flex;
         justify-content: center;
+        gap: 20px;
     }
 
     nav a {
@@ -86,7 +87,7 @@ $result = mysqli_query($conn, $sql);
 </head>
 <body>
     <nav>
-        <a href="dashboard.php">Dashboard</a> | 
+        <a href="dashboard.php">Dashboard</a>  
         <a href="add_account.php">Créer un Compte</a>
     </nav>
     <hr>

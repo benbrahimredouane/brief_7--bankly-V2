@@ -55,6 +55,7 @@ $accounts = mysqli_query($conn, "SELECT accounts.account_id, accounts.account_nu
         margin-bottom: 20px;
         display: flex;
         justify-content: center;
+        gap: 20px;
     }
 
     nav a {
@@ -106,7 +107,7 @@ $accounts = mysqli_query($conn, "SELECT accounts.account_id, accounts.account_nu
 </style>
 </head>
 <body>
-    <nav><a href="dashboard.php">Dashboard</a> | <a href="list_accounts.php">Liste des Comptes</a></nav>
+    <nav><a href="dashboard.php">Dashboard</a>  <a href="list_accounts.php">Liste des Comptes</a></nav>
     <hr>
     <h2>Nouvelle Transaction</h2>
     
