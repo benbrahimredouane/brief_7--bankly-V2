@@ -80,7 +80,7 @@ $result = mysqli_query($conn, $sql);
     }
 
     tr:hover {
-        background-color: #fbfbfb;
+        background-color: #bababaff;
     }
 </style>
 </head>
@@ -94,7 +94,7 @@ $result = mysqli_query($conn, $sql);
         <a href="transactions_history.php"> Historique</a> 
         <a href="logout.php" style="color:red"> Déconnexion</a>
     </nav>
-
+    <hr>
     <h2>Historique Global des Transactions</h2>
 
     <table>
@@ -109,13 +109,12 @@ $result = mysqli_query($conn, $sql);
         <tbody>
             <?php while($row = mysqli_fetch_assoc($result)): ?>
             <tr>
-                
                 <td><?php echo $row['name']; ?></td>
                 <td><?php echo $row['account_number']; ?></td>
                 <td class="<?php echo ($row['type'] == 'deposit') ? 'type-deposit' : 'type-withdrawal'; ?>">
                     <?php echo ($row['type'] == 'deposit') ? 'Dépôt' : 'Retrait'; ?>
                 </td>
-                <td><strong><?php echo number_format($row['amount'], 2); ?> MAD</strong></td>
+                <td><strong><?php echo $row['amount']; ?> MAD</strong></td>
             </tr>
             <?php endwhile; ?>
         </tbody>

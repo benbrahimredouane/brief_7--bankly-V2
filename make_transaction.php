@@ -76,9 +76,11 @@ $accounts = mysqli_query($conn, "SELECT accounts.account_id, accounts.account_nu
         nav a:hover {
             background: #e7f3ff;
         }
-        h2{
+
+        h2 {
             text-align: center;
         }
+
         form {
 
             background: white;
@@ -91,7 +93,7 @@ $accounts = mysqli_query($conn, "SELECT accounts.account_id, accounts.account_nu
         }
 
         label {
-            
+
             font-weight: bold;
             display: block;
             margin-bottom: 5px;

@@ -1,6 +1,9 @@
 <?php
 session_start();
-if (!isset($_SESSION['user'])) { header("Location: index.php"); exit(); }
+if (!isset($_SESSION['user'])) {
+    header("Location: index.php");
+    exit();
+}
 include 'db.php';
 
 $sql = "SELECT accounts.*, clients.name as owner_name 
@@ -11,11 +14,12 @@ $result = mysqli_query($conn, $sql);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <title>Liste des Comptes - Bankly V2</title>
     <style>
-     body {
+        body {
             font-family: 'Segoe UI', Arial, sans-serif;
             background-color: #f4f4f9;
             margin: 0;
@@ -23,7 +27,7 @@ $result = mysqli_query($conn, $sql);
             color: #333;
         }
 
-           nav {
+        nav {
             background: #fff;
             padding: 15px;
             border-radius: 8px;
@@ -46,56 +50,57 @@ $result = mysqli_query($conn, $sql);
             background: #e7f3ff;
         }
 
+          table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+       
+    }
+
     th, td {
-        padding: 15px;
+         
         text-align: left;
-        border-bottom: 1px solid #eee;
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+        
     }
 
     th {
-        background-color: #f1f3f5;
-        font-size: 13px;
+       
+        background-color: #f2f2f2;
+        color: #333;
         text-transform: uppercase;
-        color: #666;
-    }
-
-    tr:hover {
-        background-color: #fdfdfd;
-    }
-
-    
-    td:nth-child(5) {
-        font-weight: bold;
-        text-transform: capitalize;
-    }
-
-    
-    .btn-action {
-        background-color: #007bff;
-        color: white !important;
-        padding: 6px 12px;
-        text-decoration: none;
-        border-radius: 4px;
         font-size: 13px;
     }
 
-    .btn-action:hover {
-        background-color: #0056b3;
-    }
-</style>
+        .btn-action {
+            background-color: #007bff;
+            color: white !important;
+            padding: 6px 12px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        .btn-action:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
+
 <body>
-     <nav>
+    <nav>
         <a href="dashboard.php">Dashboard</a>
-        <a href="list_clients.php"> Clients</a> 
-        <a href="list_accounts.php"> Comptes</a> 
-        <a href="make_transaction.php"> Transaction</a> 
-        <a href="transactions_history.php"> Historique</a> 
+        <a href="list_clients.php"> Clients</a>
+        <a href="list_accounts.php"> Comptes</a>
+        <a href="make_transaction.php"> Transaction</a>
+        <a href="transactions_history.php"> Historique</a>
         <a href="logout.php" style="color:red"> Déconnexion</a>
     </nav>
     <hr>
     <h2>Tous les comptes bancaires</h2>
-    
+
     <table border="1" cellpadding="10">
         <thead>
             <tr>
@@ -108,19 +113,20 @@ $result = mysqli_query($conn, $sql);
             </tr>
         </thead>
         <tbody>
-            <?php while($row = mysqli_fetch_assoc($result)): ?>
-            <tr>
-                <td><?php echo $row['account_number']; ?></td>
-                <td><?php echo $row['owner_name']; ?></td>
-                <td><?php echo $row['type']; ?></td>
-                <td><strong><?php echo number_format($row['balance'], 2); ?> MAD</strong></td>
-                <td><?php echo $row['status']; ?></td>
-                <td>
-                    <a href="make_transaction.php?acc_id=<?php echo $row['account_id']; ?>">Transaction</a>
-                </td>
-            </tr>
+            <?php while ($row = mysqli_fetch_assoc($result)): ?>
+                <tr>
+                    <td><?php echo $row['account_number']; ?></td>
+                    <td><?php echo $row['owner_name']; ?></td>
+                    <td><?php echo $row['type']; ?></td>
+                    <td><strong><?php echo number_format($row['balance'], 2); ?> MAD</strong></td>
+                    <td><?php echo $row['status']; ?></td>
+                    <td>
+                        <a href="make_transaction.php?acc_id=<?php echo $row['account_id']; ?>" class="btn-action">Transaction</a>
+                    </td>
+                </tr>
             <?php endwhile; ?>
         </tbody>
     </table>
 </body>
+
 </html>

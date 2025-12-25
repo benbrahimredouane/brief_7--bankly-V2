@@ -14,7 +14,7 @@ $result = mysqli_query($conn, "SELECT * FROM clients");
 <head>
     <title>Liste des Clients</title>
     <style>
-         body {
+        body {
             font-family: 'Segoe UI', Arial, sans-serif;
             background-color: #f4f4f9;
             margin: 0;
@@ -22,7 +22,7 @@ $result = mysqli_query($conn, "SELECT * FROM clients");
             color: #333;
         }
 
-               nav {
+        nav {
             background: #fff;
             padding: 15px;
             border-radius: 8px;
@@ -65,22 +65,19 @@ $result = mysqli_query($conn, "SELECT * FROM clients");
             text-transform: uppercase;
             font-size: 13px;
         }
-
-        tr:hover {
-            background-color: #f5f5f5;
-        }
     </style>
 </head>
 
 <body>
-     <nav>
+    <nav>
         <a href="dashboard.php">Dashboard</a>
-        <a href="list_clients.php"> Clients</a> 
-        <a href="list_accounts.php"> Comptes</a> 
-        <a href="make_transaction.php"> Transaction</a> 
-        <a href="transactions_history.php"> Historique</a> 
+        <a href="list_clients.php"> Clients</a>
+        <a href="list_accounts.php"> Comptes</a>
+        <a href="make_transaction.php"> Transaction</a>
+        <a href="transactions_history.php"> Historique</a>
         <a href="logout.php" style="color:red"> Déconnexion</a>
     </nav>
+    <hr>
     <h2>Liste des Clients</h2>
     <table border="1">
         <tr>
@@ -97,9 +94,9 @@ $result = mysqli_query($conn, "SELECT * FROM clients");
                 <td><?php echo $row['email']; ?></td>
                 <td><?php echo $row['cin']; ?></td>
                 <td>
-                <a href="delete_client.php?id=<?php echo $row['client_id']; ?>" style="color:red; font-weight:bold; text-decoration:none;">
-                    Supprimer
-                </a>
+                    <a href="delete_client.php?id=<?php echo $row['client_id']; ?>" style="color:red; font-weight:bold; text-decoration:none;">
+                        Supprimer
+                    </a>
                 </td>
             </tr>
         <?php endwhile; ?>
