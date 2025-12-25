@@ -18,23 +18,35 @@ $result = mysqli_query($conn, $sql);
     <title>Historique des Transactions - Bankly V2</title>
       <style>
     body {
-        font-family: Arial, sans-serif;
-        margin: 40px;
-        background-color: #f9f9f9;
-    }
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+        }
 
-    nav {
-        margin-bottom: 20px;
-        display: flex;
-        justify-content: center;
-    }
+            nav {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+        }
 
-    nav a {
-        text-decoration: none;
-        color: #007bff;
-        font-weight: bold;
-        margin-right: 15px;
-    }
+        nav a {
+            text-decoration: none;
+            color: #007bff;
+            margin-right: 15px;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: #e7f3ff;
+        }
 
     table {
         width: 100%;
@@ -74,9 +86,13 @@ $result = mysqli_query($conn, $sql);
 </head>
 <body>
 
-    <nav>
+     <nav>
         <a href="dashboard.php">Dashboard</a>
-        <a href="list_accounts.php">Comptes</a>
+        <a href="list_clients.php"> Clients</a> 
+        <a href="list_accounts.php"> Comptes</a> 
+        <a href="make_transaction.php"> Transaction</a> 
+        <a href="transactions_history.php"> Historique</a> 
+        <a href="logout.php" style="color:red"> Déconnexion</a>
     </nav>
 
     <h2>Historique Global des Transactions</h2>
