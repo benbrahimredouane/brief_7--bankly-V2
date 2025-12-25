@@ -15,37 +15,36 @@ $result = mysqli_query($conn, $sql);
     <meta charset="UTF-8">
     <title>Liste des Comptes - Bankly V2</title>
     <style>
-    body {
-        font-family: 'Segoe UI', Arial, sans-serif;
-        margin: 40px;
-        background-color: #f8f9fa;
-        color: #333;
-    }
+     body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+        }
 
-    nav {
-        margin-bottom: 20px;
-        padding: 10px;
-        background: white;
-        border-radius: 5px;
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-    }
+           nav {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+        }
 
-    nav a {
-        text-decoration: none;
-        color: #007bff;
-        font-weight: 600;
-    }
+        nav a {
+            text-decoration: none;
+            color: #007bff;
+            margin-right: 15px;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
 
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        background: white;
-        border-radius: 8px;
-        overflow: hidden; 
-        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    }
+        nav a:hover {
+            background: #e7f3ff;
+        }
 
     th, td {
         padding: 15px;
@@ -86,9 +85,13 @@ $result = mysqli_query($conn, $sql);
 </style>
 </head>
 <body>
-    <nav>
-        <a href="dashboard.php">Dashboard</a>  
-        <a href="add_account.php">Créer un Compte</a>
+     <nav>
+        <a href="dashboard.php">Dashboard</a>
+        <a href="list_clients.php"> Clients</a> 
+        <a href="list_accounts.php"> Comptes</a> 
+        <a href="make_transaction.php"> Transaction</a> 
+        <a href="transactions_history.php"> Historique</a> 
+        <a href="logout.php" style="color:red"> Déconnexion</a>
     </nav>
     <hr>
     <h2>Tous les comptes bancaires</h2>
