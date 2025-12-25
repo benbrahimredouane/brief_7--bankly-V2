@@ -112,6 +112,7 @@ $total_global = mysqli_fetch_assoc($res_solde)['total_global'] ?? 0;
     <p>Bienvenue, <strong><?php echo $_SESSION['user']; ?></strong></p>
 
     <nav>
+        <a href="dashboard.php">Dashboard</a>
         <a href="list_clients.php"> Clients</a> 
         <a href="list_accounts.php"> Comptes</a> 
         <a href="make_transaction.php"> Transaction</a> 
