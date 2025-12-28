@@ -71,6 +71,17 @@ $clients = mysqli_query($conn, "SELECT client_id, name FROM clients");
     button:hover {
         background-color: #0056b3;
     }
+    .Cbtn{
+        margin: auto;
+        margin-top: 5px;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+        color: #ffffffff;
+        background-color: orange;
+        
+    }
 </style>
     </head>
 <body>
@@ -85,6 +96,7 @@ $clients = mysqli_query($conn, "SELECT client_id, name FROM clients");
         <input type="text" name="type" placeholder="Type (ex: Epargne)" required><br><br>
         <input type="number" name="balance" placeholder="Solde Initial" required><br><br>
         <button type="submit" name="save_acc">Ouvrir le compte</button>
+        <a class="Cbtn" href="list_accounts.php">Cancel</a>
     </form>
 </body>
 </html>
