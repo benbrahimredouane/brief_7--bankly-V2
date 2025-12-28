@@ -125,18 +125,18 @@ $accounts = mysqli_query($conn, "SELECT accounts.account_id, accounts.account_nu
         button:hover {
             background-color: #218838;
         }
+        .Cbtn{
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+
+        }
     </style>
 </head>
 
 <body>
-    <nav>
-        <a href="dashboard.php">Dashboard</a>
-        <a href="list_clients.php"> Clients</a>
-        <a href="list_accounts.php"> Comptes</a>
-        <a href="make_transaction.php"> Transaction</a>
-        <a href="transactions_history.php"> Historique</a>
-        <a href="logout.php" style="color:red"> Déconnexion</a>
-    </nav>
+  
     <hr>
     <h2>Nouvelle Transaction</h2>
 
@@ -163,6 +163,7 @@ $accounts = mysqli_query($conn, "SELECT accounts.account_id, accounts.account_nu
         <input type="number" step="0.01" name="amount" required><br><br>
 
         <button type="submit" name="execute">Confirmer l'opération</button>
+        <a class="Cbtn"  href="dashboard.php">Cancel</a>
     </form>
 </body>
 
