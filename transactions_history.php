@@ -82,6 +82,21 @@ $result = mysqli_query($conn, $sql);
     tr:hover {
         background-color: #bababaff;
     }
+    .list{
+        text-align: center;
+    }
+   
+      .link{
+            display: flex;
+            justify-content: center;
+            text-decoration: none;
+            color: #ffffffff;
+            padding: 10px;
+            background-color: #007bffff;
+        }
+        .link:hover{
+            background: #6092c6ff;
+        }
 </style>
 </head>
 <body>
@@ -90,13 +105,12 @@ $result = mysqli_query($conn, $sql);
         <a href="dashboard.php">Dashboard</a>
         <a href="list_clients.php"> Clients</a> 
         <a href="list_accounts.php"> Comptes</a> 
-        <a href="make_transaction.php"> Transaction</a> 
         <a href="transactions_history.php"> Historique</a> 
         <a href="logout.php" style="color:red"> Déconnexion</a>
     </nav>
     <hr>
-    <h2>Historique Global des Transactions</h2>
-
+    <h2 class="list">Historique Global des Transactions</h2>
+    <a class="link" href="make_transaction.php">make transaction</a>
     <table>
         <thead>
             <tr>
