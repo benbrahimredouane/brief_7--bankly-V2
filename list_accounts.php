@@ -86,6 +86,21 @@ $result = mysqli_query($conn, $sql);
         .btn-action:hover {
             background-color: #0056b3;
         }
+        .list{
+            text-align: center;
+        }
+        
+         .link{
+            display: flex;
+            justify-content: center;
+            text-decoration: none;
+            color: #ffffffff;
+            padding: 10px;
+            background-color: #007bffff;
+        }
+        .link:hover{
+            background: #6092c6ff;
+        }
     </style>
 </head>
 
@@ -94,14 +109,14 @@ $result = mysqli_query($conn, $sql);
         <a href="dashboard.php">Dashboard</a>
         <a href="list_clients.php"> Clients</a>
         <a href="list_accounts.php"> Comptes</a>
-        <a href="make_transaction.php"> Transaction</a>
         <a href="transactions_history.php"> Historique</a>
         <a href="logout.php" style="color:red"> Déconnexion</a>
     </nav>
     <hr>
-    <h2>Tous les comptes bancaires</h2>
+    <h2 class="list">Tous les comptes bancaires</h2>
+    <a class="link" href="add_account.php">add account</a>
 
-    <table border="1" cellpadding="10">
+    <table  cellpadding="10">
         <thead>
             <tr>
                 <th>Numéro de Compte</th>
