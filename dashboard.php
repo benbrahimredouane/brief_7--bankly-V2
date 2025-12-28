@@ -115,7 +115,6 @@ $total_global = mysqli_fetch_assoc($res_solde)['total_global'] ?? 0;
         <a href="dashboard.php">Dashboard</a>
         <a href="list_clients.php"> Clients</a> 
         <a href="list_accounts.php"> Comptes</a> 
-        <a href="make_transaction.php"> Transaction</a> 
         <a href="transactions_history.php"> Historique</a> 
         <a href="logout.php" style="color:red"> Déconnexion</a>
     </nav>
