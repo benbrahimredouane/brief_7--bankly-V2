@@ -136,7 +136,9 @@ $result = mysqli_query($conn, $sql);
                     <td><strong><?php echo number_format($row['balance'], 2); ?> MAD</strong></td>
                     <td><?php echo $row['status']; ?></td>
                     <td>
-                        <a href="make_transaction.php?acc_id=<?php echo $row['account_id']; ?>" class="btn-action">Transaction</a>
+                        <a href="delete_account.php?id=<?php echo $row['account_id']; ?>" style="color:red;">delete</a>
+                        <a href="edit_account.php?id=<?php echo $row['account_id']; ?>">Modifier</a>
+
                     </td>
                 </tr>
             <?php endwhile; ?>
