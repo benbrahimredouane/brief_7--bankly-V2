@@ -163,7 +163,7 @@ $accounts = mysqli_query($conn, "SELECT accounts.account_id, accounts.account_nu
         <input type="number" step="0.01" name="amount" required><br><br>
 
         <button type="submit" name="execute">Confirmer l'opération</button>
-        <a class="Cbtn"  href="dashboard.php">Cancel</a>
+        <a class="Cbtn"  href="transactions_history.php">Cancel</a>
     </form>
 </body>
 
